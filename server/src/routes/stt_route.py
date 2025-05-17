@@ -1,5 +1,5 @@
 from fastapi import APIRouter, UploadFile, File
-from stt.whisper_wrapper import STTModel
+from src.stt.whisper_wrapper import STTModel  
 import shutil
 
 router = APIRouter()

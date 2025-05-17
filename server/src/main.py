@@ -1,9 +1,10 @@
 from fastapi import FastAPI
-from routes.stt_route import router as stt_router
+from src.routes import routers
 
 app = FastAPI()
 
-app.include_router(stt_router, prefix="/api/stt")
+for router in routers:
+    app.include_router(router, prefix="/api/stt")
 
 @app.get("/")
 def root():
